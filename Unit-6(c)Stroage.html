@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="click1()">set</button> 
+   <button onclick="click2()">get</button> 
+   <div></div>
+   <div></div>
+   
+</body>
+<script>
+
+    function click1 (){
+        localStorage.setItem("name", "Ram")
+        localStorage.setItem("contact", "5654652626")
+        localStorage.setItem("location", "jaipur")
+
+
+}
+
+    function click2 (){
+   let a = localStorage.getItem("name")
+   let c = localStorage.getItem("contact")
+   let b = localStorage.getItem("location")
+  let val = document.createElement("h1")
+  let vall = document.createElement("h2")
+  let valll = document.createElement("h3")
+  document.body.appendChild(val)
+  document.body.appendChild(vall)
+  document.body.appendChild(valll)
+document.getElementsByTagName("h1")[0].innerHTML= a
+document.getElementsByTagName("h2")[1].innerHTML= b
+document.getElementsByTagName("h3")[2].innerHTML= c
+}
+
+</script>
+
+<script src="Unit-6(b)Stroage.js"></script>
+</html>

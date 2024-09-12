@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div></div>
+    <label for="">Name</label>
+<input type="text" id="input" placeholder="type here">
+    <button onclick="click1()">click me</button>
+
+</body>
+<script>
+    function  click1 (){
+
+// setInterval(()=>{
+    let val = document.querySelector("input").value
+        let div = document.querySelectorAll("div")[0]
+        // document.querySelectorAll("div")[0].style.backgroundColor="red"
+        let div2 = document.createElement("h2")
+        div2.innerHTML = "Hello"
+
+        
+
+        div.appendChild(div2)
+
+    
+    }
+
+
+
+
+   
+    
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+</head>
+<style>
+div{
+    height: 200px;
+    width: 200px;
+    border: 3px solid rgb(249, 4, 151);
+    font-size: 100px;
+    font-family:monospace;
+}
+</style>
+<body>
+    <div>ram</div>
+    <button onclick="button1()">Button</button>
+    
+</body>
+<script>
+    
+    const button1=()=>{
+        setInterval(()=>{
+     let a =  Math.floor(Math.random() *255+1)
+     let b =  Math.floor(Math.random() *255+1)
+     let c =  Math.floor(Math.random() *255+1)
+
+
+     document.querySelector("div").style.color=`rgb(${a}, ${b}, ${c})`
+    //  document.querySelector("div").style.backgroundColor=`rgb(${a}, ${b}, ${c})`
+
+
+    }, 100)
+    }
+
+
+
+</script>
+</html>
+
+
+

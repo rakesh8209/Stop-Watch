@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+
+<body>
+    
+<button onclick="click1()">Search</button>
+</body>
+<script>
+    const click1 =  async ()=>{
+    // const get =  async ()=>{
+  let output = await fetch("https://fakestoreapi.com/products");
+  let data = await output.json();
+  console.log(data)
+};
+
+</script>
+</html>

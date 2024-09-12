@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Font Link -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Palanquin+Dark:wght@400;500;600;700&family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+<link rel="icon" href="pngimg.com - calculator_PNG7932.png">
+  </head>
+  <style>
+    button{
+        background-color: rgb(14, 67, 67);
+        color: rgb(225, 221, 221);
+        font-family: "Permanent Marker", cursive;
+        /* background: transparent; */
+        box-shadow: 2px -1px 5px rgb(85, 84, 84) ;
+    }
+    input{
+        background-color: rgb(224, 245, 245);
+        font-family: "Permanent Marker", cursive;
+    }
+    body{
+        background-color: rgb(240, 211, 236);
+    }
+   
+  </style>
+  <body>
+    
+  <div class="calculator">
+    <input type="text" placeholder="0" style="width: 493px; height: 70px; margin-top: 190px; margin-left: 540px;" id="input">
+  </div>
+<div style="margin-left: 540px;" id="button">
+<div>
+    <button style="width: 120px; height: 55px;" >clr</button>
+    <button style="width: 120px; height: 55px;">del</button>
+    <button style="width: 120px; height: 55px;">%</button>
+    <button style="width: 120px; height: 55px;">/</button>
+</div>
+<div>
+    <button style="width: 120px; height: 55px;">7</button>
+    <button style="width: 120px; height: 55px;">8</button>
+    <button style="width: 120px; height: 55px;">9</button>
+    <button style="width: 120px; height: 55px;">*</button>
+</div>
+<div>
+    <button style="width: 120px; height: 55px;">4</button>
+    <button style="width: 120px; height: 55px;">5</button>
+    <button style="width: 120px; height: 55px;">6</button>
+    <button style="width: 120px; height: 55px;">-</button>
+</div>
+<div>
+    <button style="width: 120px; height: 55px;">1</button>
+    <button style="width: 120px; height: 55px;">2</button>
+    <button style="width: 120px; height: 55px;">3</button>
+    <button style="width: 120px; height: 55px;">+</button>
+</div>
+<div>
+    <button style="width: 120px; height: 55px;">~</button>
+    <button style="width: 120px; height: 55px;">0</button>
+    <button style="width: 120px; height: 55px;">.</button>
+    <button style="width: 120px; height: 55px;">=</button>
+</div>
+</div>
+  </body>
+  <script>
+    let input = document.getElementById("input")
+  let button = document.querySelectorAll("button")  
+
+  let output = "";
+  let arr = Array.from(button);
+  arr.forEach(button => {
+    button.addEventListener('click', (e) =>{
+        if(e.target.innerHTML == '=' ){
+            output = eval(output);
+            input.value = output;
+        }
+        else if(e.target.innerHTML == 'clr'){
+          output = "";
+            input.value = output;
+
+        }
+        else if(e.target.innerHTML == 'del'){
+          output = output.substring(0, output.length-1);
+            input.value = output;
+
+        }
+
+        else{
+          output +=  e.target.innerHTML;
+            input.value = output;
+
+        }
+        
+        
+
+    })
+  })
+  </script>
+</html>

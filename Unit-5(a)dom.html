@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <p></p>
+    <div class="hello">Name</div>
+    <button onclick="click2()">Button</button>
+</body>
+<script>
+    const click2 = () =>{
+        document.getElementById("head").innerHTML="paragraph"
+        document.getElementById("head").style.backgroundColor="yellow"
+        document.getElementsByTagName("p")[0].innerHTML="paragrap2"
+        document.getElementsByTagName("p")[0].style.backgroundColor="red"
+
+    }
+
+
+    // Alert Method
+    alert("this is alert message")
+</script>
+</html>
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="head">This</h1>
+    <p>This is Paragraph</p>
+    <div>this is div</div>
+    <div>this</div>
+    
+    <div id="this">DIV</div>
+    <div class="col-12">Ram</div>
+    <button onclick="button1()">Click</button>
+    
+
+</body>
+<script>
+    const button1 = () => {
+        
+        setInterval(()=>{
+            
+            let num = Math.floor(Math.random() *6+1);
+            console.log(num)
+
+            // Tag Name
+            document.getElementsByTagName("p")[0].innerHTML="PARAGRAPH"
+            document.querySelectorAll("div")[0].innerHTML="THIS IS DIV"
+            document.querySelectorAll("div")[0].style.color="pink"
+            
+            
+            // id
+            document.getElementById("head").style.backgroundColor="green"
+            document.querySelector("#this").innerHTML="RAKESH"
+            document.querySelector("#this").style.backgroundColor="pink"
+
+
+            // class
+            document.querySelector(".col-12").style.backgroundColor="blue"
+            document.querySelector(".col-12").style.color="white"
+            
+            
+        }, 1000)
+        
+    
+    }
+</script>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="head">This</h1>
+    <p>This is Paragraph</p>
+    <div>this is div</div>
+    <div>this</div>
+    <div class="col-10">DIV</div>
+    <button onclick="button1()">Click</button>
+</body>
+<script>
+    const button1 = () => {
+        setTimeout(()=>{
+        document.getElementsByTagName("p")[0].innerHTML="PARAGRAPH"
+        document.getElementsByTagName("p")[0].style.backgroundColor="yellow"
+        document.getElementById("head").style.backgroundColor="green"
+        document.querySelectorAll("div")[0].innerHTML="THIS IS DIV"
+        document.querySelectorAll("div")[0].style.color="pink"
+        document.querySelectorAll("div")[1].innerHTML="HELLO"
+        document.querySelectorAll("div")[1].style.color="red"
+        document.querySelectorAll("div")[2].innerHTML="hello"
+        document.querySelectorAll("div")[2].style.color="brown"
+
+                 
+    }, 2000)
+       
+    }
+</script>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="Head"></h2>
+    <p>Hello</p>
+    <p>my</p>
+    <p>Name</p>
+    <p>is</p>
+    <p>rakesh</p>
+    <p>Prajapat</p>
+
+    <button onclick="click1 ()">My button</button>
+</body>
+<script>
+    const click1 = () =>{
+        document.getElementById("Head").innerHTML="Heading"
+        document.getElementById("Head").style.color=("green")
+        document.getElementsByTagName("p")[0].innerHTML="Heading2"
+        document.getElementsByTagName("p")[1].style.color="red"
+        document.getElementsByTagName("p")[2].style.color="yellow"
+        document.getElementsByTagName("p")[3].style.color="brown"
+        document.getElementsByTagName("p")[4].style.color="pink"
+        document.getElementsByTagName("p")[5].style.color="green"
+
+
+    }
+</script>
+</html> -->
+
+
+
+
+
+
+

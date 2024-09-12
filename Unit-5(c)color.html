@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1500px;
+            height: 700px;
+            border: 3px solid rgb(40, 35, 35) ;
+            /* color: rgb(37, 2, 235); */
+            text-align: center;
+            font-size: 500px;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>Ram</div>
+    <!-- <button onclick="handelclick()">color picker</button> -->
+</body>
+<script>
+
+    // const handelclick = (() => {
+    //     let col1 = Math.floor(Math.random() * 255 + 1)
+    //     let col2 = Math.floor(Math.random() * 255 + 1)
+    //     let col3 = Math.floor(Math.random() * 255 + 1)
+
+    //     document.querySelector("div").style.color = `rgb(${col1},${col2},${col3})`
+    // }, 1000);
+
+    setInterval(() => {
+        let col1 = Math.floor(Math.random() * 255 + 1)
+        let col2 = Math.floor(Math.random() * 255 + 1)
+        let col3 = Math.floor(Math.random() * 255 + 1)       
+
+        document.querySelector("div").style.color = `rgb(${col1},${col2},${col3})`
+        // document.querySelector("div").style.backgroundColor = "pink"
+        
+    }, 500);
+
+    setInterval(() =>{
+
+    let a = Math.floor(Math.random() *255+1)
+    let b = Math.floor(Math.random() *255+1)
+    let c = Math.floor(Math.random() *255+1)
+    // document.querySelector("div").style.backgroundColor=`rgb(${a}, ${b}, ${c})`
+    document.querySelectorAll("div")[0].style.backgroundColor=`rgb(${a}, ${b}, ${c})`
+    }, 500)
+</script>
+
+</html>

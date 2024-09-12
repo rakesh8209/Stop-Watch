@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <input type="text" >
+    <button onclick="click1()">set</button>
+    <button onclick="click2()">get</button>
+
+</body>
+<script>
+const click1=()=>{
+let a = document.querySelectorAll("input")[0].value
+let b = document.querySelectorAll("input")[1].value
+let c=a+""+" "+b
+ console.log(c)             
+ localStorage.setItem("data",JSON.stringify(c))
+}
+
+    
+    
+    function click2 (){
+        let output = JSON.parse(localStorage.getItem("data"))
+        let val = document.createElement("h1")
+        document.body.appendChild(val)
+        document.getElementsByTagName("h1")[0].innerHTML= output
+        
+
+
+}
+
+</script>
+</html>

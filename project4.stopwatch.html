@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Palanquin+Dark:wght@400;500;600;700&family=Permanent+Marker&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+<link rel="icon" href="png-transparent-stopwatch-timer-others-angle-chronometer-watch-stopwatch-thumbnail.png">
+</head>
+<style>
+    body{
+        background-color: rgb(223, 149, 206);
+        flex-direction: column;
+       }
+ 
+div{
+
+    font-size: 120px;
+    color: rgb(9, 9, 9);
+  
+    font-family: "Platypi", serif;
+    font-weight: 2000px;
+    text-align: center;
+}
+.stopwatch{
+    background: linear-gradient(rgb(190, 152, 76), rgb(122, 122, 154), rgb(200, 151, 114));
+    border-radius: 500px;
+    width: 750px;
+    margin-left: 400px;
+    margin-top: 220px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+</style>
+<body onload="Time()">
+<div class="stopwatch">
+    <div class="display">00 : 00 : 00</div>
+ </div>
+ <div class="buttons">
+    <button id="start" class="btn" style="background: linear-gradient(rgb(133, 108, 197), rgb(91, 91, 224), rgb(33, 53, 77)); font-size: xx-large;">START</button>
+    <button id="stop" class="btn1" style="background: linear-gradient(rgb(222, 66, 74), rgb(200, 76, 86), rgb(90, 19, 39)); font-size: xx-large;">STOP</button>
+    <button id="reset" class="btn2" style="background: linear-gradient(rgb(47, 198, 90), rgb(87, 172, 92), rgb(23, 88, 11)); font-size: xx-large;">RESET</button>
+ </div>
+</body>
+<script>
+let display = document.querySelector(".display");
+let start = document.getElementById("start");
+let stop = document.getElementById("stop");
+let reset = document.getElementById("reset");
+
+let Msec = 00;
+let Sec = 00;
+let Min = 00;
+
+let Timer = null;
+
+start.addEventListener('click', function(){
+if(Timer !== null){
+    clearInterval(Timer);
+}
+    Timer = setInterval(startTimer, 10)
+});
+
+stop.addEventListener('click', function(){
+
+    clearInterval(Timer);
+
+
+});
+reset.addEventListener('click', function(){
+    clearInterval(Timer);
+display.innerHTML = `00 : 00 : 00`;
+
+
+});
+
+function startTimer (){
+    Msec++;
+    if(Msec == 100){
+        Msec = 0;
+        Sec++;
+        if(Sec == 60){
+        Sec = 0;
+        Min++;
+        
+        }
+    }
+
+
+let MSectring = Msec < 10 ? `0${Msec}` : Msec;
+let SecString = Sec < 10 ? `0${Sec}` : Sec;
+let MinString = Min < 10 ? `0${Min}` : Min;
+
+display.innerHTML = `${MinString} : ${SecString} : ${MSectring}`
+}
+</script>
+</html>

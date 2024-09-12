@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Palanquin+Dark:wght@400;500;600;700&family=Permanent+Marker&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+<link rel="icon" href="pngimg.com - clock_PNG6611.png">
+</head>
+<style>
+ 
+h1{
+
+    font-size: 180px;
+    color: rgb(145, 140, 41);
+    background: linear-gradient(rgb(159, 71, 159), rgb(78, 78, 150) );
+    border-radius: 2%;
+    font-family: "Platypi", serif;
+    font-weight: 2000px;
+    text-align: center;
+   
+
+   } 
+</style>
+<body onload="Time()">
+ 
+    <h1>
+       
+    </h1>
+ 
+</body>
+<script>
+function Time(){
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var s = d.getSeconds();
+    var ms = d.getMilliseconds();
+    let secction = "PM";
+    if (h>12){
+        h= h-12;
+    }
+    if(h<12){
+        secction = "PM"
+    }
+
+h = h < 10 ? "0"+h : h;
+m = m < 10 ? "0"+m : m;
+s = s < 10 ? "0"+s : s;
+ms = ms < 10 ? "0"+ms : ms;
+
+    var time = h + " : " + m + " : "+ s + " : " + "  " + secction;
+    document.getElementsByTagName("h1")[0].innerText = time;
+    setTimeout(Time, 1000);
+}
+</script>
+</html>

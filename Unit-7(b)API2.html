@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fatch API</title>
+</head>
+<body>
+    <button onclick="click1()">click here</button><br>
+</body>
+<script>
+    const click1 = async()=>{
+        let a = await fetch('https://fakestoreapi.com/products  ')
+        let b = await a.json();
+        
+        b.map((e, i)=>{
+            console.log(e);
+            let div = document.createElement(`div${i}`);
+            document.body.appendChild(div);
+            document.querySelector(`div${i}`).innerHTML = `
+                 <p>id: ${e.id}<br></p>
+                 <img src=${e.image}  style="width: 100px" >
+                 <p>title: ${e.title}<br></p>
+                <p> price: ${e.price}<br></p>
+                 <p>description: ${e.description}<br></p>`
+            
+        })
+    }
+    </script>
+    </html>
